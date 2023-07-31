@@ -7,12 +7,19 @@
         "scripts": ["background.js"]
     },
     "browser_action": {
-        "default_icon": "icon.png",
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": "icon_green.png"
     },
     "permissions": ["tabs", "http://*/*", "https://*/*"],
     "content_scripts": [{
         "matches": ["*://chat.openai.com/*"],
         "js": ["content.js"]
-    }]
+    }],
+    "web_accessible_resources": [
+        "icon_green.png",
+        "icon_lightgreen.png",
+        "icon_yellow.png",
+        "icon_orange.png",
+        "icon_red.png"
+    ]
 }
